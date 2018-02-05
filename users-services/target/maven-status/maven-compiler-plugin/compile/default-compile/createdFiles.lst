@@ -1,0 +1,13 @@
+com\crm\controller\UsersController.class
+com\crm\configuration\MongodbConfig.class
+com\crm\App.class
+com\crm\repository\UsersRepository.class
+com\crm\entities\WorkShops.class
+com\crm\entities\Users.class
+com\crm\entities\WorkShopReviews.class
+com\crm\service\UserService.class
+com\crm\entities\Rooms.class
+com\crm\entities\Address.class
+com\crm\entities\EventReviews.class
+com\crm\service\UserServiceImpl.class
+com\crm\entities\Events.class
