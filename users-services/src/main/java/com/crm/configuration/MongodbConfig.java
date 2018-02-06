@@ -1,4 +1,4 @@
-package com.crm.configuration;
+/*package com.crm.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,3 +21,4 @@ public class MongodbConfig {
 
 	}
 }
+*/

@@ -1,0 +1,2 @@
+spring.data.mongodb.uri=mongodb://crm:abcd1234@ds045475.mlab.com:45475/appstory
+#spring.data.mongodb.uri=mongodb://localhost:27017/inSpace

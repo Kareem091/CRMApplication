@@ -9,21 +9,21 @@ public class Users {
 
 	@Id
 	private String id;
-	@Field("firstname")
+	@Field("firstName")
 	private String firstName;
-	@Field("secondname")
+	@Field("secondName")
 	private String secondName;
-	@Field("contactinfo")
+	@Field("contactInfo")
 	private String contactInfo;
 	private String gender;
 	private int age;
-	@Field("birthdate")
+	@Field("birthDate")
 	private String birthDate;
 	private String address;
 	private String city;
 	private String interests;
 	private String password;
-	@Field("usertype")
+	@Field("userType")
 	private int userType;
 
 	public Users() {

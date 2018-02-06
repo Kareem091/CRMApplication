@@ -2,7 +2,6 @@ com\crm\entities\Rooms.class
 com\crm\entities\Address.class
 com\crm\controller\UsersController.class
 com\crm\entities\EventReviews.class
-com\crm\configuration\MongodbConfig.class
 com\crm\App.class
 com\crm\repository\UsersRepository.class
 com\crm\entities\WorkShops.class
