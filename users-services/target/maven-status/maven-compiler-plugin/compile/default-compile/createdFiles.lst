@@ -1,10 +1,8 @@
-com\crm\entities\Rooms.class
-com\crm\entities\Address.class
 com\crm\controller\UsersController.class
-com\crm\entities\EventReviews.class
+com\crm\entities\Images.class
+com\crm\repository\ImageRepository.class
+com\crm\entities\Comments.class
 com\crm\App.class
 com\crm\repository\UsersRepository.class
-com\crm\entities\WorkShops.class
-com\crm\entities\Events.class
 com\crm\entities\Users.class
-com\crm\entities\WorkShopReviews.class
+com\crm\controller\ImageController.class

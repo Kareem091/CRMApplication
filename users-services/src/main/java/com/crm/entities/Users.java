@@ -1,50 +1,48 @@
 package com.crm.entities;
 
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 @Document(collection = "users")
 public class Users {
 
+	
 	@Id
 	private String id;
-	@Field("firstName")
-	private String firstName;
-	@Field("secondName")
-	private String secondName;
-	@Field("contactInfo")
-	private String contactInfo;
+	@Field("displayName")
+	private String displayName;
+	@Field("email")
+	private String email;
+	@Field("phoneNumber")
+	private String phoneNumber;
+	@Field("photoURL")
+	private String photoURL;
+	@Field("uid")
+	private String uid;
+	@Field("providerId")
+	private String providerId;
+	@Field("gender")
 	private String gender;
-	private int age;
-	@Field("birthDate")
-	private String birthDate;
-	private String address;
-	private String city;
-	private String interests;
-	private String password;
+	@Field("about")
+	private String about;
+	@Field("nickName")
+	private String nickName;
 	@Field("userType")
 	private int userType;
+	
+	
 
 	public Users() {
 
 	}
 
-	public Users(String firstName, String secondName, String contactInfo, String gender, int age, String birthDate,
-			String address, String city, String interests, String password, int userType) {
-		this.firstName = firstName;
-		this.secondName = secondName;
-		this.contactInfo = contactInfo;
-		this.gender = gender;
-		this.age = age;
-		this.birthDate = birthDate;
-		this.address = address;
-		this.city = city;
-		this.interests = interests;
-		this.password = password;
-		this.userType = userType;
-	}
-
+	
 	public String getId() {
 		return id;
 	}
@@ -53,28 +51,52 @@ public class Users {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getDisplayName() {
+		return displayName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
 	}
 
-	public String getSecondName() {
-		return secondName;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getContactInfo() {
-		return contactInfo;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setContactInfo(String contactInfo) {
-		this.contactInfo = contactInfo;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getPhotoURL() {
+		return photoURL;
+	}
+
+	public void setPhotoURL(String photoURL) {
+		this.photoURL = photoURL;
+	}
+
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+	public String getProviderId() {
+		return providerId;
+	}
+
+	public void setProviderId(String providerId) {
+		this.providerId = providerId;
 	}
 
 	public String getGender() {
@@ -85,52 +107,20 @@ public class Users {
 		this.gender = gender;
 	}
 
-	public int getAge() {
-		return age;
+	public String getAbout() {
+		return about;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setAbout(String about) {
+		this.about = about;
 	}
 
-	public String getBirthDate() {
-		return birthDate;
+	public String getNickName() {
+		return nickName;
 	}
 
-	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getInterests() {
-		return interests;
-	}
-
-	public void setInterests(String interests) {
-		this.interests = interests;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 
 	public int getUserType() {
@@ -141,12 +131,22 @@ public class Users {
 		this.userType = userType;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Users [id=" + id + ", firstName=" + firstName + ", secondName=" + secondName + ", contactInfo="
-				+ contactInfo + ", gender=" + gender + ", age=" + age + ", birthDate=" + birthDate + ", address="
-				+ address + ", city=" + city + ", interests=" + interests + ", password=" + password + ", userType="
-				+ userType + "]";
+    	ObjectMapper mapper = new ObjectMapper();
+    	String jsonString = "";
+		try {
+			mapper.enable(SerializationFeature.INDENT_OUTPUT);
+			jsonString = mapper.writeValueAsString(this);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+    	return jsonString;
 	}
 
+	
+	
+	
+	
 }

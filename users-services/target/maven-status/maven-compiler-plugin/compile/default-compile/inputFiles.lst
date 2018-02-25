@@ -1,11 +1,8 @@
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Events.java
 C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Users.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\configuration\MongodbConfig.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Rooms.java
 C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\controller\UsersController.java
 C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\App.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\EventReviews.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Address.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\WorkShops.java
+C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\controller\ImageController.java
+C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Comments.java
+C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\Images.java
+C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\repository\ImageRepository.java
 C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\repository\UsersRepository.java
-C:\InSpace\CRM\CRMApplication\users-services\src\main\java\com\crm\entities\WorkShopReviews.java

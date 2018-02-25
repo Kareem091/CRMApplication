@@ -2,7 +2,6 @@ package com.crm.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,12 +17,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.crm.entities.Users;
 import com.crm.repository.UsersRepository;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 public class UsersController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UsersController.class);
@@ -40,10 +38,11 @@ public class UsersController {
 	@PutMapping("/new")
 	public void insert(@RequestBody Users user) {
 		repo.insert(user);
-		LOGGER.info("--User: " + user.getFirstName() +" "+ user.getSecondName() + " Created successfully with ID: "
+		LOGGER.info("--User: " +" User id: " + user.getId() + " User uid: " + user.getUid() + " User Display: "+ user.getDisplayName() +" "+ user.getEmail() + " Created successfully with ID: "
 				+ user.getId() + " on " + new Date());
 	}
 
+	
 	@PostMapping("/update")
 	public void updateUser(@RequestBody Users user) {
 		repo.save(user);
@@ -56,17 +55,6 @@ public class UsersController {
 		LOGGER.info("--User ID Deleted: " + id + " on " + new Date());
 	}
 	
-	@GetMapping("/search/{contactinfo}")
-	public Users searchUser(@PathVariable("contactinfo")String contactinfo){
-		LOGGER.info("--Searching for user: " + contactinfo + " on " + new Date());
-		return null;
-	}
-
-	
-	@GetMapping("/login/{contactinfo}/{password}")
-	public Users login(@PathVariable("contactinfo")String contactinfo,@PathVariable("password")String password){
-		return null;
-	}
 	
 	@ExceptionHandler
 	@ResponseStatus(HttpStatus.NOT_FOUND)
