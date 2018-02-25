@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.crm.entities.Users;
 import com.crm.repository.UsersRepository;
 
+
+@CrossOrigin(origins = {"http://localhost:8100","https://kiki-crm.firebaseapp.com"}, maxAge = 6000)
 @RestController
 @RequestMapping("/api/user")
 public class UsersController {
